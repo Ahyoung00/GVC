@@ -21,17 +21,26 @@
 
 .reserve-button,
 .edit-button {
-  margin-left: 10px;
-  background-color: #65abf7;
-  color: #979595;
-  margin-top: 300px; 
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   
 }
 .share-button,
 .summary-button {
-  margin-left: 10px;
-  background-color: #65abf7;
-  color: #979595;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   
 }
 .divider {
