@@ -41,7 +41,7 @@ function App() {
       {/* 캘린더 섹션 */}
       <div className="calendar-section">
         <div className="calendar">
-          <div className="calendar-header">캘린더</div>
+          <h3>캘린더</h3>
           <hr className="divider" />
           <div className="calendar-body">
             {/* 여기에 달력을 만들거나 캘린더 컴포넌트를 추가할 수 있습니다. */}
