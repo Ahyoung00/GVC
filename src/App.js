@@ -15,22 +15,7 @@ import { useNavigate } from "react-router-dom"; //페이지 이동 시키는 모듈
 
 function App() {
 
-    var { width } = Dimensions.get('window');
-    //페이지 이동시키는 모듈
-    const navigate = useNavigate();
 
-    // 버튼 클릭시 작동할 함수들
-    const onClickButtonHold = () => {
-    };
-    const onClickButtonParticipate = () => {
-    };
-    const onClickButtonLogin = () => {
-        navigate("/loginPage");
-    };
-    const onClickButtonRegister = () => {
-    };
-
-    const Button = styled.button``;
 
 
     return (

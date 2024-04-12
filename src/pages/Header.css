@@ -15,9 +15,31 @@ nav {
         line-height: 45px;
         
     }
+.div_hover {
+    cursor: pointer;
+}
 
 .gvcStyle {
     font-weight: bold; /* 글자를 볼드체로 설정 */
     font-size: 30px; /* 글자 크기를 24픽셀로 설정 */
 }
 
+.logo {
+    margin-right: 10px;
+    padding-bottom:15px
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.site-name {
+    display: inline;
+    vertical-align: middle;
+}
+
+.site-name {
+    font-weight: bold; /* 글자를 볼드체로 설정 */
+    font-size: 10px; /* 글자 크기를 24픽셀로 설정 */
+}

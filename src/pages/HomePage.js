@@ -37,7 +37,7 @@ function HomePage() {
         navigate("/loginPage");
     };
     const onClickButtonParticipate = () => {
-        navigate("/signUp");
+        navigate("/loginPage");
     };
     const onClickButtonLogin = () => {
         navigate("/loginPage");
