@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import './App.css';
 
 
@@ -35,38 +37,46 @@ function App() {
   return (
     <div className="App">
       <h1>나의 회의 일정</h1>
-      <div className="calendar">
-        <div className="calendar-header">캘린더</div>
-        <hr className="divider" />
-        <div className="calendar-body">
-          {/* 여기에 달력을 만들거나 캘린더 컴포넌트를 추가할 수 있습니다. */}
-        </div>
-        <div className="buttons-container">
-          <button className="reserve-button">회의 예약</button>
-          <button className="edit-button">수정하기</button>
+  
+      {/* 캘린더 섹션 */}
+      <div className="calendar-section">
+        <div className="calendar">
+          <div className="calendar-header">캘린더</div>
+          <hr className="divider" />
+          <div className="calendar-body">
+            {/* 여기에 달력을 만들거나 캘린더 컴포넌트를 추가할 수 있습니다. */}
+            <Calendar />
+          </div>
+          <div className="buttons-container">
+            <button className="reserve-button">회의 예약</button>
+            <button className="edit-button">수정하기</button>
+          </div>
         </div>
       </div>
       <hr className="divider" />
-      <h3>나의 회의 기록 보기</h3>
-      <ul className="meeting-list">
-        {meetings.map((meeting) => (
-          <li key={meeting.id} className="meeting-item">
-            <strong>{meeting.title}</strong> {meeting.time}
-            <button
-              className="share-button"
-              onClick={() => handleShareClick(meeting.id)}
-            >
-              공유편집
-            </button>
-            <button
-              className="summary-button"
-              onClick={() => handleSummaryClick(meeting.id)}
-            >
-              AI 요약
-            </button>
-          </li>
-        ))}
-      </ul>
+      {/* 나의 회의 기록 섹션 */}
+      <div className="meeting-record-section">
+        <h3>나의 회의 기록 보기</h3>
+        <ul className="meeting-list">
+          {meetings.map((meeting) => (
+            <li key={meeting.id} className="meeting-item">
+              <strong>{meeting.title}</strong> {meeting.time}
+              <button
+                className="share-button"
+                onClick={() => handleShareClick(meeting.id)}
+              >
+                공유편집
+              </button>
+              <button
+                className="summary-button"
+                onClick={() => handleSummaryClick(meeting.id)}
+              >
+                AI 요약
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
