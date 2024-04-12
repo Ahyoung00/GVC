@@ -1,0 +1,49 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.calendar {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.calendar-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end; /* 버튼을 오른쪽으로 이동 */
+}
+
+.reserve-button,
+.edit-button {
+  margin-left: 10px;
+  background-color: #65abf7;
+  color: #979595;
+  margin-top: 300px; 
+  
+}
+.share-button,
+.summary-button {
+  margin-left: 10px;
+  background-color: #65abf7;
+  color: #979595;
+  
+}
+.divider {
+  margin: 20px 0;
+}
+
+.meeting-list {
+  list-style-type: none;
+  padding: 20;
+}
+
+.meeting-item {
+  margin-bottom: 10px;
+}
+

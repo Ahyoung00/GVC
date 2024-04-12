@@ -1,0 +1,74 @@
+import React, { useState } from 'react';
+import './App.css';
+
+
+function App() {
+  // 회의 일정 데이터 예시
+  const initialMeetings = [
+    { id: 1, title: '2024년 4월 15일 회의', time: '10:00' },
+    { id: 2, title: '2024년 4월 16일 회의', time: '14:00' },
+  ];
+
+  const [meetings, setMeetings] = useState(initialMeetings);
+
+  // 예약, 수정, 공유편집, AI 요약 버튼 클릭 시 동작 함수들
+  const handleReserveClick = () => {
+    // 예약 버튼 클릭 시 동작
+    console.log('예약 버튼 클릭');
+  };
+
+  const handleEditClick = () => {
+    // 수정하기 버튼 클릭 시 동작
+    console.log('수정하기 버튼 클릭');
+  };
+
+  const handleShareClick = (id) => {
+    // 공유편집 버튼 클릭 시 동작
+    console.log(`공유편집 버튼 클릭 - ID: ${id}`);
+  };
+
+  const handleSummaryClick = (id) => {
+    // AI 요약 버튼 클릭 시 동작
+    console.log(`AI 요약 버튼 클릭 - ID: ${id}`);
+  };
+
+  return (
+    <div className="App">
+      <h1>나의 회의 일정</h1>
+      <div className="calendar">
+        <div className="calendar-header">캘린더</div>
+        <hr className="divider" />
+        <div className="calendar-body">
+          {/* 여기에 달력을 만들거나 캘린더 컴포넌트를 추가할 수 있습니다. */}
+        </div>
+        <div className="buttons-container">
+          <button className="reserve-button">회의 예약</button>
+          <button className="edit-button">수정하기</button>
+        </div>
+      </div>
+      <hr className="divider" />
+      <h3>나의 회의 기록 보기</h3>
+      <ul className="meeting-list">
+        {meetings.map((meeting) => (
+          <li key={meeting.id} className="meeting-item">
+            <strong>{meeting.title}</strong> {meeting.time}
+            <button
+              className="share-button"
+              onClick={() => handleShareClick(meeting.id)}
+            >
+              공유편집
+            </button>
+            <button
+              className="summary-button"
+              onClick={() => handleSummaryClick(meeting.id)}
+            >
+              AI 요약
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
